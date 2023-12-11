@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='style.css'>
+    <title>Task manager</title>
+</head>
+
+<body>
+    <header>
+        <h1>Ma lecture</h1>
+        <h2>Click on the card = done </h2>
+        <button id="clear-btn">Clear</button>
+        <div class="cards-container"></div>
+    </header>
+    <form action="">
+        <h3>Press enter to add a book to your list</h3>
+        <div class="input-container">
+            <label for="book-title">Title: <input type="text" id="book-title" placeholder="The alchemist"></label>
+            <label for="book-priority">Priority: <input type="number" min="1" max="3" id="book-priority"
+                    value="1"></label>
+        </div>
+        <input type="submit">
+    </form>
+
+    <script src='script.js'></script>
+</body>
+
+</html>

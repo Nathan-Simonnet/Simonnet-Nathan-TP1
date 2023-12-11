@@ -1,0 +1,104 @@
+body {
+    background: rgb(160, 160, 248);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+
+    transform: scale(1);
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    height: 120px;
+    width: 200px;
+
+    margin: 12px;
+    padding: 12px;
+
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: 15px;
+
+}
+
+.high {
+    color: red;
+}
+
+.medium {
+    color: blue;
+}
+
+.low {
+    color: green;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.203);
+    border-radius: 12px;
+
+    width: 60%;
+    margin: 12px;
+    padding: 12px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+
+    margin: 12px;
+
+    & input {
+        margin: 2px;
+    }
+}
+
+input[type="submit"] {
+
+    cursor: pointer;
+    display: none;
+
+}
+
+.card.checked {
+
+    text-decoration: line-through;
+}
