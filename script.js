@@ -50,8 +50,9 @@ const restoring = function () {
     } else {
 
         toHide.classList.add(("hidden"))
-
     }
+
+    document.getElementById('test').classList.remove('hidden')
 }
 
 const cardsDisplayer = function () {
@@ -73,9 +74,11 @@ const cardsDisplayer = function () {
     document.querySelectorAll('.card').forEach((c) => {
         c.addEventListener('click', () => {
             c.classList.toggle('checked')
+            document.getElementById('test').classList.add('hidden')
             storing();
         });
     });
+
 
     storing();
 }

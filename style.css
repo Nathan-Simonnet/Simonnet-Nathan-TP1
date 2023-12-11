@@ -1,7 +1,14 @@
+:root {
+
+    --main-text-color: rgb(72, 8, 72);
+}
+
 body {
     background: rgb(160, 160, 248);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+
+    color: var(--main-text-color);
 
     display: flex;
     flex-direction: column;
@@ -10,10 +17,9 @@ body {
 }
 
 h1 {
-    background: linear-gradient(to right, #ff9900, #ff66cc);
+    background: linear-gradient(to right, rgb(72, 8, 72), #7c2c62);
     -webkit-background-clip: text;
     color: transparent;
-
 }
 
 .to-hide {
@@ -23,7 +29,7 @@ h1 {
     align-items: center;
 }
 
-.to-hide.hidden {
+.hidden {
     display: none;
 }
 
