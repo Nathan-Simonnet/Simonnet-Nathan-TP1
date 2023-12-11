@@ -1,5 +1,5 @@
 const header = document.querySelector('header');
-const clearBtn = document.getElementById('clear-btn');
+const clearBtn = document.querySelector('.clear-btn');
 const cardsContainer = document.querySelector('.cards-container');
 const form = document.querySelector('form');
 const bookTitle = document.getElementById('book-title');
