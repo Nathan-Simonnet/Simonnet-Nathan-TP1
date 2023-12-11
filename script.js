@@ -7,6 +7,8 @@ const bookPriority = document.getElementById('book-priority');
 const submit = document.querySelector('input[type="submit"]');
 const toHide = document.querySelector('.to-hide');
 
+
+// Empty array which will store our books
 let tasks = [
 
     // {
@@ -32,13 +34,14 @@ let tasks = [
 
 ];
 
+// Every time a book is add or deletd, this function is called, and inject the div name cards-container into the local storage
 const storing = function () {
     window.localStorage.list = cardsContainer.innerHTML.trim();
     console.log(window.localStorage.list.length)
 }
 
+// Every time the page load, this function is called, and inject our cards into a div name cards-container
 const restoring = function () {
-
     if (window.localStorage.list && window.localStorage.list.length > 0) {
         cardsContainer.innerHTML = window.localStorage.list
         document.querySelectorAll('.card').forEach((c) => {
@@ -48,13 +51,12 @@ const restoring = function () {
             });
         });
     } else {
-
         toHide.classList.add(("hidden"))
     }
-
     document.getElementById('test').classList.remove('hidden')
 }
 
+// Display every new book in tasks when the form is submit
 const cardsDisplayer = function () {
 
     toHide.classList.remove(("hidden"))
@@ -71,6 +73,7 @@ const cardsDisplayer = function () {
         `
     }
 
+    // Check = line-through the card texts
     document.querySelectorAll('.card').forEach((c) => {
         c.addEventListener('click', () => {
             c.classList.toggle('checked')
@@ -79,10 +82,10 @@ const cardsDisplayer = function () {
         });
     });
 
-
     storing();
 }
 
+// If checked, the card will be remove into the html, and tasks
 clearBtn.addEventListener('click', (e) => {
     document.querySelectorAll('.checked').forEach((card) => {
         const dataTitle = card.dataset.title
@@ -95,6 +98,7 @@ clearBtn.addEventListener('click', (e) => {
     });
 });
 
+// if the inputs are filled, and enter is pressed, a book is stor in tasks, and the function cardDisplayer is called
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
@@ -109,10 +113,9 @@ form.addEventListener('submit', (e) => {
     bookTitle.value = "";
 });
 
+// Well, you got it
 window.addEventListener('load', () => {
-
     restoring();
-
 });
 
 
