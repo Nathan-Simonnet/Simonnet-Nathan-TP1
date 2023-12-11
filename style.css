@@ -93,8 +93,25 @@ form {
 
     margin: 12px;
 
-    & input {
-        margin: 2px;
+    & .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+
+        width: 100%;
+
+        & label {
+            width: 30%;
+        }
+
+        & input {
+            margin: 2px;
+            font-size: 1em;
+            width: 70%;
+
+            border-radius: 6px;
+        }
     }
 }
 
