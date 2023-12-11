@@ -91,7 +91,7 @@ form {
     justify-content: center;
     align-items: baseline;
 
-    margin: 12px;
+    margin: 0 12px 12px 12px;
 
     & .container {
         display: flex;
