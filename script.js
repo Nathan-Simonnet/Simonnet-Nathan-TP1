@@ -5,6 +5,7 @@ const form = document.querySelector('form');
 const bookTitle = document.getElementById('book-title');
 const bookPriority = document.getElementById('book-priority');
 const submit = document.querySelector('input[type="submit"]');
+const toHide = document.querySelector('.to-hide');
 
 let tasks = [
 
@@ -46,12 +47,17 @@ const restoring = function () {
                 storing();
             });
         });
+    } else {
 
+        toHide.classList.add(("hidden"))
 
     }
 }
 
 const cardsDisplayer = function () {
+
+    toHide.classList.remove(("hidden"))
+
     cardsContainer.innerHTML = "";
     for (let i = 0; i < tasks.length; i++) {
 
@@ -97,9 +103,15 @@ form.addEventListener('submit', (e) => {
         })
         cardsDisplayer();
     }
+    bookTitle.value = "";
 });
 
-restoring();
+window.addEventListener('load', () => {
+
+    restoring();
+
+});
+
 
 
 

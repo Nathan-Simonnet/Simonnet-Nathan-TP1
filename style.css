@@ -7,7 +7,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+.to-hide {
+    display: block;
+}
+
+.to-hide.hidden {
+    display: none;
 }
 
 button {
